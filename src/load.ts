@@ -6,7 +6,9 @@ esriSystem.register([
     'esri/Map',
     'esri/views/MapView',
     'esri/widgets/Home',
-    'esri/widgets/Search'
+    'esri/widgets/Search',
+    'esri/widgets/Expand',
+    'esri/widgets/BasemapGallery',
 ], function() {
     // bootstrap the app
     System.import('main.js')

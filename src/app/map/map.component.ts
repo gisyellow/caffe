@@ -4,6 +4,8 @@ import Map from 'esri/Map';
 import MapView from 'esri/views/MapView';
 import Home from 'esri/widgets/Home';
 import Search from 'esri/widgets/Search';
+import Expand from 'esri/widgets/Expand';
+import BasemapGallery from 'esri/widgets/BasemapGallery';
 
 declare const __moduleName: string;
 
@@ -22,6 +24,8 @@ export class MapComponent {
   view: any = null;
   home: any = null;
   search: any = null;
+  basemapGalleryExpand: any = null;
+  basemapGallery: any = null;
 
   constructor(
     private _mapService: MapService,
@@ -44,9 +48,21 @@ export class MapComponent {
       view: this.view
     });
 
+    this.basemapGallery = new BasemapGallery({
+      view: this.view
+    });
+
+    this.basemapGalleryExpand = new Expand({
+      view: this.view,
+      content: this.basemapGallery,
+      expandIconClass: 'esri-icon-basemap'
+    });
+
     this.view.ui.add(this.home, 'bottom-right');
 
     this.view.ui.add(this.search, 'top-left');
+
+    this.view.ui.add(this.basemapGalleryExpand, 'top-right');
 
     this.view.ui.move('zoom', 'bottom-right');
   }

@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input } from '@angular/core';
 import { MapService } from './map.service';
+import { SearchService } from './search.service';
 import Map from 'esri/Map';
 import MapView from 'esri/views/MapView';
 import Home from 'esri/widgets/Home';
@@ -13,7 +14,8 @@ declare const __moduleName: string;
   moduleId: __moduleName,
   selector: 'map',
   templateUrl: 'map.component.html',
-  styleUrls: ['map.component.css']
+  styleUrls: ['map.component.css'],
+  providers: [MapService, SearchService]
 })
 
 export class MapComponent {
@@ -29,6 +31,7 @@ export class MapComponent {
 
   constructor(
     private _mapService: MapService,
+    private _searchService: SearchService,
     private elRef: ElementRef
   ) {}
 
@@ -45,7 +48,9 @@ export class MapComponent {
     });
 
     this.search = new Search({
-      view: this.view
+      view: this.view,
+      sources: this._searchService.sources,
+      searchAllEnabled: false
     });
 
     this.basemapGallery = new BasemapGallery({

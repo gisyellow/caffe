@@ -9,6 +9,9 @@ esriSystem.register([
     'esri/widgets/Search',
     'esri/widgets/Expand',
     'esri/widgets/BasemapGallery',
+    'esri/tasks/Locator',
+    'esri/layers/FeatureLayer',
+    'esri/symbols/PictureMarkerSymbol'
 ], function() {
     // bootstrap the app
     System.import('main.js')

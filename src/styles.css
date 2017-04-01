@@ -10,3 +10,11 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
+.esri-ui-bottom-right {
+  display: block;
+}
+
+.esri-ui-bottom-right .esri-component {
+  margin: 4px;
+}

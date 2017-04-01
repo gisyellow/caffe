@@ -5,7 +5,8 @@ declare const esriSystem: any;
 esriSystem.register([
     'esri/Map',
     'esri/views/MapView',
-    'esri/widgets/Home'
+    'esri/widgets/Home',
+    'esri/widgets/Search'
 ], function() {
     // bootstrap the app
     System.import('main.js')

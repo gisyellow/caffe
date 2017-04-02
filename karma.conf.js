@@ -74,7 +74,22 @@ module.exports = function(config) {
       { pattern: appBase + '**/*.ts', included: false, watched: false },
       { pattern: appBase + '**/*.js.map', included: false, watched: false },
       { pattern: testingSrcBase + '**/*.ts', included: false, watched: false },
-      { pattern: testingBase + '**/*.js.map', included: false, watched: false}
+      { pattern: testingBase + '**/*.js.map', included: false, watched: false},
+
+      // ESRI with Dojo
+      { pattern: 'bower_components/dojo/**/*.*', included: false, watched: false },
+      { pattern: 'bower_components/dojox/**/*.*', included: false, watched: false },
+      { pattern: 'bower_components/dstore/**/*.*', included: false, watched: false },
+      { pattern: 'bower_components/dgrid/**/*.*', included: false, watched: false },
+
+      { pattern: 'bower_components/dijit/**/*.*', included: false, watched: false },
+      { pattern: 'bower_components/esri/**/*.*', included: false, watched: false },
+      { pattern: 'bower_components/moment/**/*.js', included: false, watched: false },
+
+      './src/dojo.test.config.js',
+      'bower_components/dojo/dojo.js',
+      'node_modules/esri-system-js/dist/esriSystem.js',
+      './src/esri.test.load.js'
     ],
 
     // Proxied base paths for loading assets
@@ -86,6 +101,8 @@ module.exports = function(config) {
     exclude: [],
     preprocessors: {},
     reporters: ['progress', 'kjhtml'],
+
+    browserNoActivityTimeout: 100000,
 
     port: 9876,
     colors: true,

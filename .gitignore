@@ -1,4 +1,5 @@
 node_modules
+bower_components
 jspm_packages
 npm-debug.log
 debug.log
@@ -6,6 +7,9 @@ src/**/*.js
 !src/systemjs.config.extras.js
 !src/systemjs.config.js
 !src/systemjs-angular-loader.js
+!src/dojo.test.config.js
+!src/esri.load.config.js
+!src/esri.test.load.js
 *.js.map
 e2e/**/*.js
 e2e/**/*.js.map

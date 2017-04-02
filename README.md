@@ -1,7 +1,13 @@
 # Caffè
 
 A modern web map application. Built with [Angular](https://angular.io/) and 
-[ESRI](https://developers.arcgis.com/).  
+[ESRI](https://developers.arcgis.com/).
+
+## Prerequisites
+  * [Node](https://nodejs.org/en/) @ 6.9.5+
+  * [NPM](https://www.npmjs.com/) @ 3.10.10+
+  * [Bower](https://bower.io/) @ 1.8.0+
+  * [ArcGIS API for JavaScript](https://developers.arcgis.com/javascript/) @ 4.3+
 
 ## Getting Started
 Clone the repository
@@ -11,6 +17,10 @@ Clone the repository
 Change directories
 ```
   cd caffe
+```
+Install bower dependencies
+```
+  bower install
 ```
 Install dev dependencies
 ```

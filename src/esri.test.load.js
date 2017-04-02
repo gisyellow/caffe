@@ -7,6 +7,7 @@ esriSystem.register([
     'esri/widgets/Search',
     'esri/widgets/Expand',
     'esri/widgets/BasemapGallery',
+    'esri/widgets/Locate'
     'esri/tasks/Locator',
     'esri/layers/FeatureLayer',
     'esri/symbols/PictureMarkerSymbol'

@@ -7,6 +7,7 @@ import Home from 'esri/widgets/Home';
 import Search from 'esri/widgets/Search';
 import Expand from 'esri/widgets/Expand';
 import BasemapGallery from 'esri/widgets/BasemapGallery';
+import Locate from 'esri/widgets/Locate';
 
 declare const __moduleName: string;
 
@@ -28,6 +29,7 @@ export class MapComponent {
   search: any = null;
   basemapGalleryExpand: any = null;
   basemapGallery: any = null;
+  locate: any = null;
 
   constructor(
     private _mapService: MapService,
@@ -63,7 +65,14 @@ export class MapComponent {
       expandIconClass: 'esri-icon-basemap'
     });
 
+    this.locate = new Locate({
+      view: this.view,
+      graphic: null
+    });
+
     this.view.ui.add(this.home, 'bottom-right');
+
+    this.view.ui.add(this.locate, 'bottom-right');
 
     this.view.ui.add(this.search, 'top-left');
 

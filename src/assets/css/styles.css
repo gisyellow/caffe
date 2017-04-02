@@ -6,6 +6,10 @@ html, body {
   overflow: hidden;
 }
 
+*:focus {
+  outline: none;
+}
+
 .esri-view {
   height: 100%;
   width: 100%;
@@ -16,5 +20,5 @@ html, body {
 }
 
 .esri-ui-bottom-right .esri-component {
-  margin: 4px;
+  margin-top: 4px;
 }

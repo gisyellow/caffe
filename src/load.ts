@@ -14,7 +14,9 @@ esriSystem.register([
     'esri/widgets/Locate',
     'esri/tasks/Locator',
     'esri/layers/FeatureLayer',
-    'esri/symbols/PictureMarkerSymbol'
+    'esri/symbols/PictureMarkerSymbol',
+    'esri/Basemap',
+    'esri/core/Collection'
 ], function() {
   const end = performance.now();
   const time = end - start;
